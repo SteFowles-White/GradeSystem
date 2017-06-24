@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Grades
+{
+    class GradeBook
+    // This is the class that will hold be used to input the grades and conduct stat method within it.
+    
+    {
+
+        // This method is called upon to add the grades of a student to the program
+        
+        public void AddGrade(float grade)
+        {
+            grades.Add(grade);
+        }
+
+        // This is is used to store the grades of the students
+        List<float> grades = new List<float>();
+    }
+}
