@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace Grades
 {
@@ -20,7 +14,16 @@ namespace Grades
 
         public GradeStatistics ComputeStatistics()
         {
-            return new GradeStatistics();
+            GradeStatistics states = new GradeStatistics();
+
+            float sum = 0;
+            foreach( float grade in grades)
+            {
+                sum = +sum;
+
+            }
+            states.AverageGrade = sum / grades.Count;
+            return states;
         }
 
         // This method is called upon to add the grades of a student to the program
