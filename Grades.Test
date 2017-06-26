@@ -1,0 +1,46 @@
+using System;
+using Grades;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Grades.Test
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void ComputesHightestGrade()
+        {
+            GradeBook states = new GradeBook();
+            states.AddGrade(10);
+            states.AddGrade(90);
+            states.AddGrade(50);
+
+            GradeStatistics results = states.ComputeStatistics();
+            Assert.AreEqual(90, results.HighestGrade);
+        }
+
+        [TestMethod]
+        public void ComputesLowestGrade()
+        {
+            GradeBook states = new GradeBook();
+            states.AddGrade(10);
+            states.AddGrade(90);
+            states.AddGrade(50);
+
+            GradeStatistics results = states.ComputeStatistics();
+            Assert.AreEqual(10, results.LowestGrade);
+        }
+
+        [TestMethod]
+        public void ComputesAverageGrade()
+        {
+            GradeBook states = new GradeBook();
+            states.AddGrade(10);
+            states.AddGrade(90);
+            states.AddGrade(53.5f);
+
+            GradeStatistics results = states.ComputeStatistics();
+            Assert.AreEqual(51.16, results.AverageGrade, .1);
+        }
+    }
+}
