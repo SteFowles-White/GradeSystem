@@ -1,3 +1,9 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace Grades
 {
@@ -19,7 +25,9 @@ namespace Grades
             float sum = 0;
             foreach( float grade in grades)
             {
-                sum =+ grades;
+                states.LowestGrade = grades.Min();
+                states.HighestGrade = grades.Max();
+                sum += grade;
 
             }
             states.AverageGrade = sum / grades.Count;
@@ -34,5 +42,6 @@ namespace Grades
 
         // This is is used to store the grades of the students
         private List<float> grades;
+
     }
 }
