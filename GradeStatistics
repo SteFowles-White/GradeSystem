@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Grades
 {
-    class GradeStatistics
+    public class GradeStatistics
     {
+        public String name;
 
         public GradeStatistics()
         {
@@ -18,5 +19,7 @@ namespace Grades
         public float AverageGrade;
         public float LowestGrade;
         public float HighestGrade;
+
+        public string Name { get => name; set => name = value; }
     }
 }
