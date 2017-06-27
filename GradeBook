@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace Grades
 {
-    class GradeBook
+    public class GradeBook
 
     // This is the class that will hold be used to input the grades and conduct stat method within it.
     {
+
+        public String Name2;
 
         //this is contrutor class and enables grades to be input into the list declared below
         public GradeBook()
